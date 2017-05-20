@@ -19,8 +19,6 @@ get '/password' do
 	session[:player1] = params[:player1]
 	session[:player2] = params[:player2]
 	erb :password, locals:{p1_name: session[:player1], p2_name: session[:player2]}
-
-	# redirect '/gameword?player1=' + player1 + '&player2=' + player2
 end
 
 post '/gameword' do

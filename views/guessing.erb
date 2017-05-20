@@ -1,11 +1,12 @@
-<center><h3><font color = #d4c67f><font face = fantasy><%=p2_name%>, start guessing the letters.</h3></center>
-<center><h2><%=blank%></h2></center>
+<title>Hangman</title>
+<center><h3><font color = #d4c67f><font face = fantasy><%=p2_name%>, start guessing the letters.</font></h3></center>
+<center><h2><font face ="goudy old style"><%=blank%></font></h2></center>
 <br></br>
-<center><h2><font color = #b0d6d4><%=message%></font></h2></center>
+<center><h2><font face = fantasy><font color = #b0d6d4><%=message%></font></h2></center>
 <center><h2><font color = #b54343><%=message2%></font></h2></center>
 <form method="post" action="guess">
 <center><img src="http://cdn.staticneo.com/w/pokemon/4/47/385.gif"></center>
-<center><input type="text" maxlength="1" autofocus="autofocus" name="letter"></center>
+<center><input type="text" onkeyup="this.value = this.value.replace(/[^a-zA-Z]/, '')" maxlength="1" autofocus="autofocus" name="letter"></center>
 <center><input type="submit" value = "Submit Guess"></center>
 <div>
 <center>Guesses left: <%=counter%></center>

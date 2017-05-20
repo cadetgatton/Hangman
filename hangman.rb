@@ -13,7 +13,7 @@ class Hangman
 	end
 
 	def blank()
-		Array.new(charcount,"_")
+		Array.new(charcount,"_").join
 	end
 
 	def correct_letter(letter)
